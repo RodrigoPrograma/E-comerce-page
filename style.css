@@ -1,0 +1,101 @@
+body{
+    background: linear-gradient(#ECE9E6, #FFFFFF) ;   
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-repeat: no-repeat;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: monospace;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+.hero{
+    background: linear-gradient(9deg,#000000 90%, #FFFFFF,#fc67fa 120%);
+    display: grid;
+
+}
+
+.navbar-container{
+    display: flex;
+    width: 100%;
+    height: 75%;
+    margin-bottom: 3%;
+}
+
+.logo{
+    width: 25%;
+    display: flex;
+    justify-content: start;
+}
+
+.nav-item{
+    font-size: 50px;
+    font-weight: 900;
+}
+.banner{
+    height: 200%;
+    display: flex;
+    justify-content: center;
+    background-image:url("assets/Img Banner.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.banner-head{
+    
+    bottom: 3%;
+    right: 15%;
+    font-weight: 600;
+    font-size: 745%;
+    font-family: Helvetica, sans-serif;
+    color: #000000;
+}
+.banner-p{
+   
+    bottom: 4%;
+    right: 15%;
+    font-size: 500%;
+}
+
+
+
+/*Responsive -----------------------------------------------------------------------------------------------------*/
+@media (max-width: 750px) {
+    body{
+        margin: 0;
+    }
+    .nav-item{
+        font-size: 20px;
+    }
+    .navbar-container{
+        height: 55px;
+        padding: 0;
+    }
+
+    .banner{
+        height: 250px;
+    }
+    #navbar{
+        width: 100%;
+    }
+    .banner-head{
+        font-weight: 600;
+        font-size: 100%;
+    }
+    .banner-p{
+        font-size: 50%;
+    }
+    .logo{
+        width: 20%;
+        padding-left: 25px;
+    }
+}
+
+@media (min-width :720px) {
+    
+}
