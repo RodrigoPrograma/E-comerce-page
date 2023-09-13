@@ -1,101 +1,108 @@
 body{
-    background: linear-gradient(#ECE9E6, #FFFFFF) ;   
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-repeat: no-repeat;
-}
-
-a{
-    text-decoration: none;
-    color: black;
-    font-family: monospace;
-}
-a:hover{
-    text-decoration: none;
-    color: black;
-}
-.hero{
-    background: linear-gradient(9deg,#000000 90%, #FFFFFF,#fc67fa 120%);
-    display: grid;
+  font-family: 'Raleway', sans-serif;
+  background-color: #0e0e0e;
 
 }
 
-.navbar-container{
-    display: flex;
-    width: 100%;
-    height: 75%;
-    margin-bottom: 3%;
+.links{
+  font-weight: 900;
+  color: red;
 }
 
 .logo{
-    width: 25%;
-    display: flex;
-    justify-content: start;
-}
-
-.nav-item{
-    font-size: 50px;
-    font-weight: 900;
-}
-.banner{
-    height: 200%;
-    display: flex;
-    justify-content: center;
-    background-image:url("assets/Img Banner.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.banner-head{
-    
-    bottom: 3%;
-    right: 15%;
-    font-weight: 600;
-    font-size: 745%;
-    font-family: Helvetica, sans-serif;
-    color: #000000;
-}
-.banner-p{
-   
-    bottom: 4%;
-    right: 15%;
-    font-size: 500%;
+  width: 35px;
+  height: 35px;
 }
 
 
-
-/*Responsive -----------------------------------------------------------------------------------------------------*/
-@media (max-width: 750px) {
-    body{
-        margin: 0;
-    }
-    .nav-item{
-        font-size: 20px;
-    }
-    .navbar-container{
-        height: 55px;
-        padding: 0;
-    }
-
-    .banner{
-        height: 250px;
-    }
-    #navbar{
-        width: 100%;
-    }
-    .banner-head{
-        font-weight: 600;
-        font-size: 100%;
-    }
-    .banner-p{
-        font-size: 50%;
-    }
-    .logo{
-        width: 20%;
-        padding-left: 25px;
-    }
+.imagen{
+height: 604px;
+margin-top: 15px;
 }
 
-@media (min-width :720px) {
-    
+.weAre{
+  background-image: url(/assets/local-frente.jpeg)!important;
+  color: #ffebeb;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.weParagraph{
+  font-size: 35px;
+  font-weight: 600;
+  font-family: Helvetica, sans-serif;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+}
+.weParagraphInitial{
+  font-size: 35px;
+  font-weight: 600;
+  font-family: Helvetica, sans-serif;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 25%;
+}
+.weParagraphEnd{
+  font-size: 35px;
+  font-weight: 600;
+  font-family: Helvetica, sans-serif;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 25%;
+}
+
+.card-bod{
+  display:flex; 
+  justify-content: center;
+  grid-gap: 10px;}
+ 
+ .modal-button{
+  color: aliceblue;
+  font-size: 15px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;}
+
+
+.slide-caption{
+  width: 50%;}
+
+.section-header{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.modal-Img{
+  width: 30%;
+}
+
+.modal-button{
+  font-size: 34px;
+  font-family: Helvetica, sans-serif;
+}
+@media only screen and (max-width: 750px) and (min-width: 300px) {
+  
+  .weAre{
+    background-size: cover !important;
+  }
+  .imagen{
+height: 133px;
+  }
+
+  .card-bod{
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .slide-caption{
+    width: 80%;
+  }
+
+  .weParagraph, .weParagraphEnd, .weParagraphInitial{
+    font-size: 20px;
+  }
 }
