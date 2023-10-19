@@ -19,8 +19,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Raleway:wght@900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&family=Open+Sans:ital,wght@0,600;0,800;1,500&family=Raleway:ital,wght@0,400;0,900;1,300&display=swap"
       rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
     />
 
     <link
@@ -31,10 +35,10 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <nav class="navbar navbar-expand-lg bg-body-tertiary" id="Navbar">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"
-            ><img src="/assets/logo.jpg" class="logo" alt=""
+          <a class="navbar-brand ps-3" href="#"
+            ><img src="/assets/logoblanco.png" class="logo" alt=""
           /></a>
           <button
             class="navbar-toggler"
@@ -47,11 +51,14 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mb-2 mb-lg-0">
               <li class="nav-item">
                 <a
-                  class="nav-link active"
+                  class="links nav-link"
                   aria-current="page"
                   href="#productos-nav"
                   >PRODUCTOS</a
@@ -61,31 +68,16 @@
                 <a class="links nav-link" href="#">PRECIOS</a>
               </li>
               <li class="nav-item active">
-                <a
-                  class="links nav-link"
-                  href="#"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
+                <a class="links nav-link" href="#locales" role="button">
                   LOCALES
                 </a>
               </li>
               <li class="nav-item active">
-                <a class="links nav-link" aria-disabled="true">CONTACTO</a>
+                <a class="links nav-link" href="#locales" role="button"
+                  >CONTACTO</a
+                >
               </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
@@ -140,16 +132,23 @@
             <hr />
             <p class="weParagraph">Somos una familia</p>
             <p class="weParagraph">Un compromiso</p>
-            <p class="weParagraphEnd">Un proveedor de soluciones</p>
+            <p class="weParagraph">Un lugar de recuerdos</p>
+            <p class="weParagraphEnd">Tu aliada en el ahorro</p>
           </div>
         </div>
       </section>
 
-      <section>
-        <h1 class="section-header" id="productos-nav">PRODUCTOS</h1>
+      <section class="productGuide">
+        <h1 class="section-header" id="productos-nav">
+          <i class="las la-ellipsis-h"></i>PRODUCTOS<i
+            class="las la-ellipsis-h"
+          ></i>
+        </h1>
         <div class="card-bod">
           <div class="card item1">
-            <img src="assets/2pan.jpg" class="card-img-top" alt="..." />
+            <div class="imageContainer">
+              <img src="assets/medialunas.jpg" class="imageCard" alt="..." />
+            </div>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Desarrollo de producto 1.</p>
@@ -157,8 +156,21 @@
             </div>
           </div>
 
-          <div class="card item2">
-            <img src="assets/1Pan.jpg" class="card-img-top" alt="..." />
+          <div class="card item1">
+            <div class="imageContainer">
+              <img src="assets/pan dulce.jpg" class="imageCard" alt="..." />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Desarrollo de producto 1.</p>
+              <a href="#" class="btn btn-primary">Mas info</a>
+            </div>
+          </div>
+
+          <div class="card item1">
+            <div class="imageContainer">
+              <img src="assets/brioche" class="imageCard" alt="..." />
+            </div>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Desarrollo de producto 2.</p>
@@ -166,8 +178,10 @@
             </div>
           </div>
 
-          <div class="card item3">
-            <img src="assets/1Pan.jpg" class="card-img-top" alt="..." />
+          <div class="card item1">
+            <div class="imageContainer">
+              <img src="assets/alfajores.png" class="imageCard" alt="..." />
+            </div>
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">Desarrollo de producto 3.</p>
@@ -178,130 +192,88 @@
       </section>
 
       <section>
-        <h1 class="section-header">LOCALES</h1>
+        <h1 id="locales" class="section-header">
+          <i class="las la-ellipsis-h"></i>LOCALES<i
+            class="las la-ellipsis-h"
+          ></i>
+        </h1>
 
-        <h3 class="d-flex justify-content-center">
+        <h3 class="d-flex justify-content-center localesHeaderTitle">
           Puedes consultar el horario de atencion de nuestras sucursales
         </h3>
 
-        <div class="row d-flex justify-content-center mt-5 mb-5">
-          <!-- Button trigger modal -->
-          <img
-                    class="modal-Img"
-                    src="/assets/local-frente-pic.jpg"
-                    alt=""
-                  />
-          <button
-            type="button"
-            class="btn modal-button"
-            data-bs-toggle="modal"
-            data-bs-target="#staticBackdrop"
-          >
-            Pilar
-          </button>
+        <div class="row d-flex justify-content-center mt-5 mb-5 w-100 mx-auto">
+          <div class="container col mt-5 d-flex justify-content-center">
+            <a href="https://wa.me/message/AXKEZI2N2RCAI1">
+              <img
+                class="local-img"
+                src="/assets/panaderia frente.jpg"
+                alt=""
+              />
+              <div class="container d-flex justify-content-center">
+                <div class="text-container">
+                  <h2 class="pachecoText">GENERAL PACHECO</h2>
+                  <p class="pachecoParagraph">Lunes a Sabado de 7 a 19</p>
+                </div>
+              </div>
+            </a>
+            <a href="https://wa.me/message/AXKEZI2N2RCAI1">
+              <img
+                class="local-img"
+                src="/assets/panaderia frente2.png"
+                alt=""
+              />
+              <div class="container d-flex justify-content-center">
+                <div class="text-container">
+                  <h2 class="torcuatoText">DON TORCUATO</h2>
+                  <p class="torcuatoParagraph">Miercoles a domingo de 7 a 22</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <!-- ========== 
+        -Designar accesos finales
+        -Incluir copyright
+        -Terminar footer
+        ========== -->
 
-          <!-- Modal -->
-          <div
-            class="modal fade"
-            id="staticBackdrop"
-            data-bs-backdrop="static"
-            data-bs-keyboard="false"
-            tabindex="-1"
-            aria-labelledby="staticBackdropLabel"
-            aria-hidden="true"
-          >
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                    Modal title
-                  </h1>
-                  <button
-                    type="button"
-                    class="btn-close"
-                    data-bs-dismiss="modal"
-                    aria-label="Close"
-                  ></button>
+        <div class="container d-flex mx-auto col-6 p-5 w-100">
+          <div class="footer-wrap container row">
+            <img class="footer__img" src="/assets/logonegro.png" alt="" />
+            <div class="footer-contenedor">
+              <div class="contacto">
+                <h6 class="footerHeader">TELEFONOS</h6>
+                <div class="footer-links">
+                  <a href="#Navbar">Inicio</a>
                 </div>
-                <div class="modal-body">
-                  <p>Dias: Lunes - Sabado</p>
-                  <p>Horarios: 10 am - 18pm</p>
+                <div class="footer-links">
+                  <a href="#productos-nav">Productos</a>
                 </div>
-                <div class="modal-footer">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                  <button type="button" class="btn btn-primary">
-                    Understood
-                  </button>
+              </div>
+              <div class="productos">
+                <h6 class="footerHeader">SEDE PRINCIPAL</h6>
+                <div class="footer-links">
+                  <a href="">Precios</a>
+                </div>
+              </div>
+              <div class="social">
+                <h6 class="footerHeader">SOCIAL</h6>
+                <div class="footer-links-social">
+                  <a href=""><i class="lab la-instagram"></i></a>
+                  <a href=""><i class="lab la-facebook"></i></a>
+                  <a href=""><i class="lab la-twitter"></i></a>
                 </div>
               </div>
             </div>
           </div>
-            <!-- Button trigger modal ------------------------------------------------------------------------------>
-            <img
-                      class="modal-Img"
-                      src="/assets/local-frente-pic.webp"
-                      alt=""
-                    />
-            <button
-              type="button"
-              class="btn modal-button"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-            >
-              Nordelta
-            </button>
-  
-            <!-- Modal -->
-            <div
-              class="modal fade"
-              id="staticBackdrop"
-              data-bs-backdrop="static"
-              data-bs-keyboard="false"
-              tabindex="-1"
-              aria-labelledby="staticBackdropLabel"
-              aria-hidden="true"
-            >
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                      Modal title
-                    </h1>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="modal"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="modal-body">
-                    <p>Dias: Martes - Domingo</p>
-                    <p>Horarios: 10 am - 18pm</p>
-                  </div>
-                  <div class="modal-footer">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button type="button" class="btn btn-primary">
-                      Understood
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
         </div>
-      </section>
+        <div class="footerCopyright p-3 text-container">
+          <p class="copyright">Copyright © 2023 MuestraClient by Webvita</p>
+        </div>
+      </footer>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

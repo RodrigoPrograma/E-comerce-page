@@ -1,42 +1,45 @@
-body{
-  font-family: 'Raleway', sans-serif;
+body {
+  font-family: "Raleway", sans-serif;
   background-color: #0e0e0e;
+  color: #ebe4d1;
+}
+/** Header **/
+.links {
+  font-family: Montserrat, sans-serif;
+  font-weight: 800;
+  color: rgb(0, 0, 0);
+  transition: all .5s ease-in-out;
+}
+
+.logo {
+  width: 50%;
 
 }
 
-.links{
-  font-weight: 900;
-  color: red;
+/** Nosotros **/
+.imagen {
+  height: 604px;
+
+  background-color: white;
 }
-
-.logo{
-  width: 35px;
-  height: 35px;
-}
-
-
-.imagen{
-height: 604px;
-margin-top: 15px;
-}
-
-.weAre{
-  background-image: url(/assets/local-frente.jpeg)!important;
-  color: #ffebeb;
+.weAre {
+  background-image: url(/assets/teamUp.png) !important;
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: 50% 25%;
+  
 }
 
-.weParagraph{
-  font-size: 35px;
+.weParagraph {
+  font-size: 30px;
   font-weight: 600;
   font-family: Helvetica, sans-serif;
   align-content: center;
   justify-content: center;
   display: flex;
 }
-.weParagraphInitial{
-  font-size: 35px;
+.weParagraphInitial {
+  font-size: 30px;
   font-weight: 600;
   font-family: Helvetica, sans-serif;
   align-content: center;
@@ -44,8 +47,8 @@ margin-top: 15px;
   display: flex;
   margin-top: 25%;
 }
-.weParagraphEnd{
-  font-size: 35px;
+.weParagraphEnd {
+  font-size: 30px;
   font-weight: 600;
   font-family: Helvetica, sans-serif;
   align-content: center;
@@ -54,77 +57,222 @@ margin-top: 15px;
   margin-bottom: 25%;
 }
 
-.card-bod{
-  display:flex; 
+.slide-caption {
+  width: 50%;
+}
+
+/* Productos*/
+
+.card-bod {
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 22px;
+  margin-left: 35px;
+  margin-right: 35px;
+}
+.item1{
+  max-width: 300px;
+}
+
+.imageContainer{
+  display: flex;
   justify-content: center;
-  grid-gap: 10px;}
- 
- .modal-button{
-  color: aliceblue;
-  font-size: 15px;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 10px;}
+}
+
+.imageCard{
+  max-width: 250px;
+}
 
 
-.slide-caption{
-  width: 50%;}
-
-.section-header{
+/* Locales Section */
+.section-header {
   display: flex;
   justify-content: center;
   margin-bottom: 5%;
   margin-top: 5%;
 }
 
-.modal-Img{
-  width: 30%;
+.local-img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.modal-button{
-  font-size: 34px;
-  font-family: Helvetica, sans-serif;
+.la-ellipsis-h {
+  line-height: inherit;
+  margin: 0px 25px 0px 25px;
 }
 
-.item2:hover{
-  filter:brightness(50%)
+.local-img:hover {
+  opacity: 30%;
+  transition: all 0.4s ease-in-out;
 }
+.pachecoText,
+.torcuatoText {
+  font-weight: 900;
+  font-family: "Open sans";
+}
+.torcuatoParagraph,
+.pachecoParagraph {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: #f5c1c1;
+  text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #000000;
+}
+
+.footer-contenido {
+  background-color: #000000;
+  justify-content: center;
+  padding: 70px 0 33px 0;
+}
+
+.footerHeader {
+  letter-spacing: 1px;
+  color: #ffffff;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  margin-bottom: 12px;
+  text-align: center;
+}
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  margin-top: 17px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #7681ab;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.footer-links-social a {
+  color: #ffffff;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.footer-contenedor {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  width: auto;
+  gap: 3rem;
+}
+.footer__img {
+  width: 25%;
+}
+
+.footer-wrap {
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.copyright {
+  text-align: center;
+}
+@media max {
+}
+
 @media only screen and (max-width: 750px) and (min-width: 250px) {
-  
-  .item1, .item2, .item3 {
-    width: 11rem;
-    height: 23rem;
-
+  .navbar-brand{
+    width: 200px;
   }
 
-  .card-text{
+  .card-text {
     display: none;
   }
-
-
-
-  .weAre{
-    background-size: cover !important;
+  
+  .weAre {
+    background-size: inherit;
   }
-  .imagen{
-height: 133px;
+  
+  .localesHeaderTitle {
+    text-align: center;
+    font-size: 16px;
   }
-
-  .card-bod{
-    display: grid;
-    grid-template-columns: repeat(2, 0fr);
+  
+  .imagen {
+    height: 133px;
   }
 
   
-
-  .slide-caption{
+  .slide-caption {
     width: 80%;
   }
-
-  .weParagraph, .weParagraphEnd, .weParagraphInitial{
+  
+  .weParagraph,
+  .weParagraphEnd,
+  .weParagraphInitial {
     font-size: 20px;
   }
-
-  .modal-Img{
+  .card-bod {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 0px;
+    margin-right: 0px;
+    justify-items: center;
+    column-gap: 0px;
+  }
+  .item1 {
+    width: 10rem;
+    height: 15rem;
+  }
+  
+  .imageCard{
+    width: 120px;
+  }
+  
+  .pachecoText,
+  .torcuatoText {
+    font-size: 16px;
+    text-align: center;
+  }
+  .torcuatoParagraph,
+  .pachecoParagraph {
+    font-size: 11px;
+  }
+  
+  .footer-wrap {
+    justify-content: center;
+  }
+  
+  .footer__img {
     width: 70%;
+    padding-bottom: 20%;
+  }
+  
+  .contacto,
+  .producto {
+    width: 340px;
+  }
+
+  .footerHeader {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  
+  .footer-links a {
+    font-size: 14px;
+    text-align: center;
   }
 }
